@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CustomSectionTableViewCell" customModule="HotelBookingApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="51.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cSe-As-Mij">
+                        <rect key="frame" x="16" y="8" width="288" height="30"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8T-os-ets">
+                                <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                <state key="normal" title="Nearby">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSegment:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zVt-S6-7uz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0W-AX-eAu">
+                                <rect key="frame" x="96" y="0.0" width="96" height="30"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                <state key="normal" title="Popular">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSegment:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wWU-tI-LVt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOI-PP-Ehn">
+                                <rect key="frame" x="192" y="0.0" width="96" height="30"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                <state key="normal" title="All">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSegment:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8KS-vZ-9fz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIH-gN-dme">
+                        <rect key="frame" x="61" y="38" width="6" height="6"/>
+                        <color key="backgroundColor" name="ThemeColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="iIH-gN-dme" secondAttribute="height" multiplier="1:1" id="0Zl-iV-jUv"/>
+                            <constraint firstAttribute="width" constant="6" id="dwD-4R-wCn"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="iIH-gN-dme" firstAttribute="top" secondItem="cSe-As-Mij" secondAttribute="bottom" id="1Rp-il-Jpf"/>
+                    <constraint firstAttribute="bottom" secondItem="iIH-gN-dme" secondAttribute="bottom" constant="7.5" id="Ets-UU-ahV"/>
+                    <constraint firstAttribute="trailing" secondItem="cSe-As-Mij" secondAttribute="trailing" constant="16" id="FjW-yX-Mwo"/>
+                    <constraint firstItem="iIH-gN-dme" firstAttribute="centerX" secondItem="m8T-os-ets" secondAttribute="centerX" id="P5H-u4-805"/>
+                    <constraint firstItem="cSe-As-Mij" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="PMC-UZ-QmW"/>
+                    <constraint firstItem="cSe-As-Mij" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="xZM-Pc-Gnx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnAll" destination="NOI-PP-Ehn" id="eQi-Wt-BZH"/>
+                <outlet property="btnNearBy" destination="m8T-os-ets" id="r56-AB-bN4"/>
+                <outlet property="btnPopular" destination="w0W-AX-eAu" id="XHW-Uk-THJ"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="ThemeColor">
+            <color red="0.58431372549019611" green="0.12549019607843137" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
